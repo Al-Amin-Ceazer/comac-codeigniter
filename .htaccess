@@ -1,0 +1,8 @@
+#php_value magic_quotes 0
+#php_flag magic_quotes off
+#php_value magic_quotes_gpc 0
+#php_flag magic_quotes_gpc off
+
+RewriteEngine on
+RewriteCond $1 !^(index\.php|images|system|assets|corporate)
+RewriteRule ^(.*)$ index.php?/$1 [L]
